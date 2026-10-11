@@ -1,54 +1,96 @@
+
+
+// import React from 'react';
+
+// export default function DashboardCard({
+//   title,
+//   value,
+//   icon: Icon,
+//   color = 'blue',
+//   subtitle,
+// }) {
+//   const colorThemes = {
+//     blue: 'text-sky-400',
+//     green: 'text-emerald-400',
+//     yellow: 'text-amber-400',
+//     red: 'text-rose-400',
+//     purple: 'text-violet-400',
+//     slate: 'text-slate-300',
+//   };
+
+//   const iconColor = colorThemes[color] || colorThemes.slate;
+
+//   return (
+//     <div className="group rounded-2xl border border-slate-700/70 bg-slate-800 p-5 transition-colors duration-200 hover:border-slate-600 hover:bg-slate-800/90">
+//       <div className="flex items-start justify-between gap-3">
+//         <div className="min-w-0">
+//           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+//             {title}
+//           </p>
+
+//           <h3 className="text-2xl font-bold tracking-tight text-slate-100">
+//             {value}
+//           </h3>
+
+//           {subtitle && (
+//             <p className="mt-2 text-xs font-medium text-slate-400">
+//               {subtitle}
+//             </p>
+//           )}
+//         </div>
+
+//         <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-700 bg-slate-900 ${iconColor} transition-colors group-hover:border-slate-600`}>
+//           <Icon size={21} strokeWidth={1.8} />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
 import React from 'react';
 
-export default function DashboardCard({ title, value, icon: Icon, color = 'blue', subtitle }) {
-  const colorThemes = {
-    blue: {
-      bg: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
-      glow: 'group-hover:shadow-indigo-500/20',
-      iconBg: 'bg-gradient-to-br from-indigo-500 to-blue-600 text-white shadow-lg shadow-indigo-500/30',
-    },
-    green: {
-      bg: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-      glow: 'group-hover:shadow-emerald-500/20',
-      iconBg: 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/30',
-    },
-    yellow: {
-      bg: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-      glow: 'group-hover:shadow-amber-500/20',
-      iconBg: 'bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-lg shadow-amber-500/30',
-    },
-    red: {
-      bg: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
-      glow: 'group-hover:shadow-rose-500/20',
-      iconBg: 'bg-gradient-to-br from-rose-500 to-red-600 text-white shadow-lg shadow-rose-500/30',
-    },
-    purple: {
-      bg: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
-      glow: 'group-hover:shadow-purple-500/20',
-      iconBg: 'bg-gradient-to-br from-purple-500 to-pink-600 text-white shadow-lg shadow-purple-500/30',
-    },
+export default function DashboardCard({
+  title,
+  value,
+  icon: Icon,
+  color = 'blue',
+  subtitle,
+}) {
+  const iconColors = {
+    blue: 'text-blue-600 bg-blue-50',
+    green: 'text-emerald-600 bg-emerald-50',
+    yellow: 'text-amber-600 bg-amber-50',
+    red: 'text-rose-600 bg-rose-50',
+    purple: 'text-violet-600 bg-violet-50',
+    slate: 'text-slate-600 bg-slate-100',
   };
 
-  const theme = colorThemes[color] || colorThemes.blue;
+  const iconStyle = iconColors[color] || iconColors.blue;
 
   return (
-    <div className={`group glass-card rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 ${theme.glow}`}>
-      <div className="flex items-start justify-between">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">{title}</p>
-          <h3 className="text-2xl font-black text-slate-100 tracking-tight">{value}</h3>
+    <div className="group rounded-xl border border-slate-200 bg-white p-5 transition-colors duration-200 hover:border-blue-200">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+            {title}
+          </p>
+
+          <h3 className="text-2xl font-bold tracking-tight text-slate-800">
+            {value}
+          </h3>
+
           {subtitle && (
-            <p className="text-xs font-semibold text-slate-300 mt-2 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+            <p className="mt-2 text-xs font-medium text-slate-500">
               {subtitle}
             </p>
           )}
         </div>
-        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${theme.iconBg} transition-transform group-hover:scale-110 duration-200`}>
-          <Icon size={22} />
+
+        <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${iconStyle}`}>
+          <Icon size={21} strokeWidth={1.8} />
         </div>
       </div>
     </div>
   );
 }
-
