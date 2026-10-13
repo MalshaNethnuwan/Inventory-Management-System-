@@ -37,12 +37,15 @@ export default function Dashboard() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 glass-panel p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/10 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
+
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/10 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
+
+
               {role.replace('_', ' ')} PORTAL
             </span>
           </div>
-          <h2 className="text-2xl font-black text-slate-900 dark:text-slate-100 tracking-tight flex items-center gap-2">
-            Welcome back, {user?.name || 'User'} 
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 tracking-tight flex items-center gap-2">
+            Great to Have You  on  Board, {user?.name || 'User'} 
           </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
             {role === 'ADMIN' && 'System overview, user role management, revenue streams, and high-level controls.'}
