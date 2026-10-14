@@ -35,14 +35,13 @@ export default function Login() {
   return (
     <div className="relative flex items-center justify-center min-h-screen p-4 overflow-hidden font-sans bg-slate-950 text-slate-100">
       
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+      
 
       <div className="relative z-10 w-full max-w-md">
         <div className="p-8 border shadow-2xl glass-panel rounded-3xl border-slate-800 backdrop-blur-xl">
           
           <div className="mb-8 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 mb-4 shadow-xl rounded-2xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-500 shadow-indigo-500/30 ring-1 ring-white/20">
+            <div className="inline-flex items-center justify-center w-16 h-16 mb-4 shadow-xl rounded-2xl  to-purple-500  ring-1 ring-white/20">
               <Box size={32} className="text-white" />
             </div>
             <h1 className="flex items-center justify-center gap-2 text-2xl font-black tracking-tight text-slate-100">
