@@ -3,12 +3,13 @@ import './App.css';
 import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import DashboardCard from './components/DashboardCard';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Login/>
+        <Dashboard/>
       </AuthProvider>
     </BrowserRouter>
   );
