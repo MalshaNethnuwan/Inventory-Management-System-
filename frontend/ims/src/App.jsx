@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import DashboardCard from './components/DashboardCard';
 import Dashboard from './pages/Dashboard';
 import ChangePassword from './pages/ChangePassword';
+import Categories from './pages/Catergories';
 
 function App() {
   return (
