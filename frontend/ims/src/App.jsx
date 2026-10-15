@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import DashboardCard from './components/DashboardCard';
 import Dashboard from './pages/Dashboard';
+import ChangePassword from './pages/ChangePassword';
 
 function App() {
   return (

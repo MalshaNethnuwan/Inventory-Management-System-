@@ -5,6 +5,7 @@ import {
   ArrowUpRight, Activity, Users, FileText, Plus, Search, RotateCcw, Tag
 } from 'lucide-react';
 import DashboardCard from '../components/DashboardCard';
+import StatusBadge from '../components/StatusBadge';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
 
