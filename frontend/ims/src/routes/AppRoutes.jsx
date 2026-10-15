@@ -2,7 +2,9 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Login from '../pages/Login';
-
+import ChangePassword from '../pages/ChangePassword';
+import Dashboard from '../pages/Dashboard';
+import Layout from '../components/Layout';
 
 function ProtectedRoute({ children, roles }) {
   const { user, loading } = useAuth();
