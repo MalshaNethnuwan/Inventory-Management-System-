@@ -4,6 +4,16 @@ import { useAuth } from '../context/AuthContext';
 import Login from '../pages/Login';
 import ChangePassword from '../pages/ChangePassword';
 import Dashboard from '../pages/Dashboard';
+import Users from '../pages/Users';
+import Products from '../pages/Products';
+import Categories from '../pages/Categories';
+import Suppliers from '../pages/Suppliers';
+import Stock from '../pages/Stock';
+import PurchaseOrders from '../pages/PurchaseOrders';
+import Sales from '../pages/Sales';
+import Invoice from '../pages/Invoice';
+import Returns from '../pages/Returns';
+import Reports from '../pages/Reports';
 import Layout from '../components/Layout';
 
 function ProtectedRoute({ children, roles }) {
@@ -35,7 +45,26 @@ export default function AppRoutes() {
           )
         }
       />
-      
+      <Route
+        path="/change-password"
+        element={
+          user ? <ChangePassword /> : <Navigate to="/login" replace />
+        }
+      />
+      <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+        <Route index element={<Dashboard />} />
+        <Route path="users" element={<ProtectedRoute roles={['ADMIN']}><Users /></ProtectedRoute>} />
+        <Route path="products" element={<ProtectedRoute roles={['ADMIN', 'INVENTORY_MANAGER', 'SALES_STAFF']}><Products /></ProtectedRoute>} />
+        <Route path="categories" element={<ProtectedRoute roles={['ADMIN', 'INVENTORY_MANAGER']}><Categories /></ProtectedRoute>} />
+        <Route path="suppliers" element={<ProtectedRoute roles={['ADMIN', 'INVENTORY_MANAGER']}><Suppliers /></ProtectedRoute>} />
+        <Route path="stock" element={<ProtectedRoute roles={['ADMIN', 'INVENTORY_MANAGER']}><Stock /></ProtectedRoute>} />
+        <Route path="purchase-orders" element={<ProtectedRoute roles={['ADMIN', 'INVENTORY_MANAGER']}><PurchaseOrders /></ProtectedRoute>} />
+        <Route path="sales" element={<ProtectedRoute roles={['ADMIN', 'SALES_STAFF']}><Sales /></ProtectedRoute>} />
+        <Route path="invoice/:id" element={<ProtectedRoute roles={['ADMIN', 'SALES_STAFF', 'INVENTORY_MANAGER']}><Invoice /></ProtectedRoute>} />
+        <Route path="returns" element={<ProtectedRoute roles={['ADMIN', 'SALES_STAFF']}><Returns /></ProtectedRoute>} />
+        <Route path="reports" element={<ProtectedRoute roles={['ADMIN', 'INVENTORY_MANAGER']}><Reports /></ProtectedRoute>} />
+      </Route>
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
