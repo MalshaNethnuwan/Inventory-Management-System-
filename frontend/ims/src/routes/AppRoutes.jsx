@@ -6,7 +6,7 @@ import ChangePassword from '../pages/ChangePassword';
 import Dashboard from '../pages/Dashboard';
 import Users from '../pages/Users';
 import Products from '../pages/Products';
-import Categories from '../pages/Categories';
+import Categories from '../pages/Catergories';
 import Suppliers from '../pages/Suppliers';
 import Stock from '../pages/Stock';
 import PurchaseOrders from '../pages/PurchaseOrders';
