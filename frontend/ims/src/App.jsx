@@ -1,19 +1,18 @@
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import './App.css';
 import { AuthProvider } from './context/AuthContext';
-import Login from './pages/Login';
-import DashboardCard from './components/DashboardCard';
-import Dashboard from './pages/Dashboard';
-import ChangePassword from './pages/ChangePassword';
-import Categories from './pages/Catergories';
+import { ThemeProvider } from './context/ThemeContext';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <Invoice/>
-      </AuthProvider>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
