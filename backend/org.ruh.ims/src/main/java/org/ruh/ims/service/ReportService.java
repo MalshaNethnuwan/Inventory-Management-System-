@@ -32,7 +32,7 @@ public class ReportService {
         return productRepository.findAll();
     }
 
-    public List<ProductReturn> getPurchaseReport() {
+    public List<PurchaseOrder> getPurchaseReport() {
         return purchaseOrderRepository.findAll();
     }
 

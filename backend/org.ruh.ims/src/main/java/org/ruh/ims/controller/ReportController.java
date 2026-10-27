@@ -30,7 +30,7 @@ public class ReportController {
     }
 
     @GetMapping("/purchases")
-    public List<ProductReturn> purchaseReport() {
+    public List<PurchaseOrder> purchaseReport() {
         return reportService.getPurchaseReport();
     }
 
