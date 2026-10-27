@@ -1,5 +1,6 @@
 package org.ruh.ims.service;
 
+import org.ruh.ims.model.ProductReturn;
 import org.ruh.ims.model.PurchaseOrder;
 import org.ruh.ims.repository.PurchaseOrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,11 @@ public class PurchaseOrderService {
     @Autowired
     private PurchaseOrderRepository purchaseOrderRepository;
 
-    public List<PurchaseOrder> getAllOrders() {
+    public List<ProductReturn> getAllOrders() {
         return purchaseOrderRepository.findAll();
     }
 
-    public PurchaseOrder getOrderById(String id) {
+    public ProductReturn getOrderById(String id) {
         return purchaseOrderRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Purchase order not found"));
     }

@@ -1,6 +1,7 @@
 package org.ruh.ims.service;
 
 import org.ruh.ims.model.Product;
+import org.ruh.ims.model.ProductReturn;
 import org.ruh.ims.model.PurchaseOrder;
 import org.ruh.ims.model.Sale;
 import org.ruh.ims.repository.ProductRepository;
@@ -31,7 +32,7 @@ public class ReportService {
         return productRepository.findAll();
     }
 
-    public List<PurchaseOrder> getPurchaseReport() {
+    public List<ProductReturn> getPurchaseReport() {
         return purchaseOrderRepository.findAll();
     }
 

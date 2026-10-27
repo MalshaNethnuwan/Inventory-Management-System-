@@ -1,6 +1,7 @@
 package org.ruh.ims.controller;
 
 import org.ruh.ims.model.Product;
+import org.ruh.ims.model.ProductReturn;
 import org.ruh.ims.model.PurchaseOrder;
 import org.ruh.ims.model.Sale;
 import org.ruh.ims.service.ReportService;
@@ -29,7 +30,7 @@ public class ReportController {
     }
 
     @GetMapping("/purchases")
-    public List<PurchaseOrder> purchaseReport() {
+    public List<ProductReturn> purchaseReport() {
         return reportService.getPurchaseReport();
     }
 

@@ -1,5 +1,6 @@
 package org.ruh.ims.controller;
 
+import org.ruh.ims.model.ProductReturn;
 import org.ruh.ims.model.PurchaseOrder;
 import org.ruh.ims.service.PurchaseOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class PurchaseOrderController {
     private PurchaseOrderService purchaseOrderService;
 
     @GetMapping
-    public List<PurchaseOrder> getAll() {
+    public List<ProductReturn> getAll() {
         return purchaseOrderService.getAllOrders();
     }
 
