@@ -65,7 +65,7 @@ export default function ChangePassword() {
         <div className="p-8 border shadow-2xl glass-panel rounded-3xl border-slate-200 dark:border-slate-800 backdrop-blur-xl">
           {/* Header */}
           <div className="mb-6 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 mb-4 shadow-xl rounded-2xl bg-gradient-to-tr from-amber-500 via-orange-500 to-indigo-600 shadow-amber-500/20 ring-1 ring-white/20">
+            <div className="inline-flex items-center justify-center w-16 h-16 mb-4 shadow-xl rounded-2xl  ring-1 ring-white/20">
               <KeyRound size={32} className="text-white" />
             </div>
             <h1 className="text-2xl font-black tracking-tight text-slate-900 dark:text-slate-100">
@@ -141,7 +141,7 @@ export default function ChangePassword() {
             <button
               type="submit"
               disabled={loading}
-              className="flex items-center justify-center w-full gap-2 py-3 mt-4 text-sm font-bold text-white transition-all duration-200 shadow-lg bg-gradient-to-r from-amber-600 via-orange-600 to-indigo-600 hover:from-amber-500 hover:to-indigo-500 rounded-xl shadow-amber-600/30 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex items-center justify-center w-full gap-2 py-3 mt-4 text-sm font-bold text-white transition-all duration-200 s bg-gradient-to-r  hover:from-orange-600 hover:to-orange-600 rounded-xl  disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <div className="w-5 h-5 border-2 rounded-full border-white/30 border-t-white animate-spin"></div>

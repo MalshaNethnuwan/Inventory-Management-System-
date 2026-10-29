@@ -39,12 +39,10 @@ export default function Sidebar() {
       {/* Brand Header */}
       <div className="px-6 py-5 border-b border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
-            <Box size={20} className="text-white" />
-          </div>
+          
           <div>
             <h1 className="font-extrabold text-slate-900 dark:text-white text-base tracking-wide flex items-center gap-1.5">
-              IMS <span className="text-xs px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">PRO</span>
+              IMS 
             </h1>
             <p className="text-xs text-slate-500 dark:text-slate-400">Inventory Platform</p>
           </div>
@@ -90,9 +88,7 @@ export default function Sidebar() {
       {/* User Info Footer */}
       <div className="p-4 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/80 dark:bg-slate-950/40">
         <div className="flex items-center gap-3 p-2 rounded-lg bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/40">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center font-bold text-white text-xs">
-            {user?.name ? user.name.charAt(0).toUpperCase() : 'U'}
-          </div>
+          
           <div className="overflow-hidden">
             <p className="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">{user?.name || 'User'}</p>
             <p className="text-[10px] text-indigo-600 dark:text-indigo-400 font-medium tracking-wide truncate">{user?.role?.replace('_', ' ')}</p>
