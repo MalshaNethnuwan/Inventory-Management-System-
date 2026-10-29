@@ -58,15 +58,15 @@ export default function ChangePassword() {
       </div>
 
       {/* Background ambient glows */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-amber-500/10 dark:bg-amber-600/20 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] bg-indigo-500/10 dark:bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+      {/* <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-amber-500/10 dark:bg-amber-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] bg-indigo-500/10 dark:bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"></div> */}
 
       <div className="relative z-10 w-full max-w-md">
-        <div className="p-8 border shadow-2xl glass-panel rounded-3xl border-slate-200 dark:border-slate-800 backdrop-blur-xl">
+        <div className="p-8 border  glass-panel rounded-3xl border-slate-200 dark:border-slate-800 backdrop-blur-xl">
           {/* Header */}
           <div className="mb-6 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 mb-4 shadow-xl rounded-2xl  ring-1 ring-white/20">
-              <KeyRound size={32} className="text-white" />
+            <div className="inline-flex items-center justify-center w-16 h-16 mb-4  rounded-2xl  ring-1 ring-white/20">
+              <KeyRound size={32} className="text-black" />
             </div>
             <h1 className="text-2xl font-black tracking-tight text-slate-900 dark:text-slate-100">
               Change Password Required
@@ -141,7 +141,7 @@ export default function ChangePassword() {
             <button
               type="submit"
               disabled={loading}
-              className="flex items-center justify-center w-full gap-2 py-3 mt-4 text-sm font-bold text-white transition-all duration-200 s bg-gradient-to-r  hover:from-orange-600 hover:to-orange-600 rounded-xl  disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex items-center justify-center w-full gap-2 py-3 mt-4 text-sm font-bold text-black transition-all duration-200 s bg-gradient-to-r  hover:from-orange-600 hover:to-orange-600 rounded-xl  disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <div className="w-5 h-5 border-2 rounded-full border-white/30 border-t-white animate-spin"></div>
