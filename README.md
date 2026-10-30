@@ -41,7 +41,7 @@ mvn spring-boot:run
 
 **3. Run the Frontend**
 ```bash
-cd frontend
+cd frontend/ims
 npm install
 npm run dev
 ```
