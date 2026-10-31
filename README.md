@@ -22,8 +22,11 @@ It manages products, categories, suppliers, stock, purchase orders, sales, retur
 | Layer    |                 Technology                          |
 
 | Frontend | React, Vite, React Router, Axios, Tailwind CSS      |
+
 | Backend  | Java 17, Spring Boot 3.2, Spring Security, Lombok   |
+
 | Database | MongoDB (Atlas) with Spring Data MongoDB            |
+
 | Security | JWT, BCrypt                                         |
 
 
@@ -82,7 +85,9 @@ It manages products, categories, suppliers, stock, purchase orders, sales, retur
 | Role              | Can access                                                       |
 
 | ADMIN             | Everything, including user management                            |
+
 | INVENTORY_MANAGER | Products, categories, suppliers, stock, purchase orders, reports |
+
 | SALES_STAFF       | Product list (read only), sales, invoices, returns               |
 
 ## Database design
@@ -93,6 +98,7 @@ The database has 9 collections. Sale items and purchase order items are embedded
 | Collection | Purpose |
 
 | users             | Login accounts (unique email)                      |
+
 | categories        | Product groups                                     |
 | suppliers         | Vendors                                            |
 | products          | Main entity, references category and supplier      |
