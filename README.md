@@ -21,13 +21,13 @@ It manages products, categories, suppliers, stock, purchase orders, sales, retur
 
 | Layer    |                 Technology                          |
 
-| Frontend | React, Vite, React Router, Axios, Tailwind CSS      |
+| Frontend ----> React, Vite, React Router, Axios, Tailwind CSS      |
 
-| Backend  | Java 17, Spring Boot 3.2, Spring Security, Lombok   |
+| Backend ----> Java 17, Spring Boot 3.2, Spring Security, Lombok   |
 
-| Database | MongoDB (Atlas) with Spring Data MongoDB            |
+| Database ----> MongoDB (Atlas) with Spring Data MongoDB            |
 
-| Security | JWT, BCrypt                                         |
+| Security ----> JWT, BCrypt                                         |
 
 
 ## Setup
@@ -99,14 +99,14 @@ The database has 9 collections. Sale items and purchase order items are embedded
 
 | users             | Login accounts (unique email)                      |
 
-| categories        | Product groups                                     |
-| suppliers         | Vendors                                            |
-| products          | Main entity, references category and supplier      |
-| purchase_orders   | Stock ordered from suppliers, with embedded items  |
-| sales             | Customer invoices, with embedded items             |
-| product_returns   | Returned goods, linked to an invoice and a product |
-| stock_adjustments | Manual stock corrections awaiting approval         |
-| stock_transfers   | Stock moved between locations                      |
+| categories ----> Product groups                                     |
+| suppliers  ----> Vendors                                            |
+| products   ----> Main entity, references category and supplier      |
+| purchase_orders ---> Stock ordered from suppliers, with embedded items  |
+| sales       ----> Customer invoices, with embedded items             |
+| product_returns  ----> Returned goods, linked to an invoice and a product |
+| stock_adjustments----> Manual stock corrections awaiting approval         |
+| stock_transfers ----> Stock moved between locations                      |
 
 ## Main API endpoints
 
